@@ -1,29 +1,30 @@
 ### Install
 
-```
+```bash
 npm install --save v-clipboard
 ```
 
 ### Use
 
-```
-// Option 1:
-// Using template only
+Option 1: *Using template only*.
 
+```vue
 <input v-model="foo">
 
 <button v-clipboard="foo">
   Copy to clipboard
 </button> 
+```
 
-// Option 2:
-// Using javascript call
+Option 2: *Using javascript call*.
 
+```vue
 <button @click="copy">
   Copy to clipboard
 </button> 
 
 ...
+
 methods: {
   copy () {
     this.$clipboard("Baaaaaaaaar")
