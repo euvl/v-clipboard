@@ -2,7 +2,7 @@
   * Copyright (c) 2017 - Yev Vlasenko
   */
 const cssText = 
-  'position:fixed;pointer-events:none;z-index:-9999;visible:hidden;'
+  'position:fixed;pointer-events:none;z-index:-9999;visibility:hidden;'
 
 const copy = (text) => {
   let textArea = document.createElement("textarea")
