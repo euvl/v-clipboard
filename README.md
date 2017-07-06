@@ -47,9 +47,8 @@ Option 2: *Using javascript call*.
 <button @click="copy">
   Copy to clipboard
 </button> 
-
-...
-
+```
+```javascript
 methods: {
   copy () {
     this.$clipboard("Baaaaaaaaar")
