@@ -1,13 +1,15 @@
 /** 
   * Copyright (c) 2017 - Yev Vlasenko
   */
+const cssText = 
+  'position:fixed;pointer-events:none;z-index:-9999;visible:hidden;'
+
 const copy = (text) => {
   let textArea = document.createElement("textarea")
   let success = false
 
   textArea.value = text
-  textArea.style.cssText = 
-    'position:fixed;pointer-events:none;visible:hidden;'
+  textArea.style.cssText = cssText
     
   document.body.appendChild(textArea)
   textArea.select()
