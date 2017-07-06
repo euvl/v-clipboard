@@ -37,3 +37,13 @@ methods: {
   }
 }
 ```
+
+### Events
+
+```vue
+<button v-clipboard="foo"
+        @copy="clipboardSuccessHandler"
+        @copy-error="clipboardErrorHandler">
+  Copy to clipboard
+</button> 
+```
