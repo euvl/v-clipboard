@@ -1,3 +1,7 @@
+## Vue.js Clipboard plugin
+
+(No dependencies, less than **2kb** minified)
+
 ### Install
 
 ```bash
