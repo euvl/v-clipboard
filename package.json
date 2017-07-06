@@ -1,0 +1,28 @@
+{
+  "name": "v-clipboard",
+  "description": "Vue.js Clipboard Plugin",
+  "version": "1.0.0",
+  "author": "euvl <yev.vlasenko@gmail.com>",
+  "private": false,
+  "scripts": {
+    "build": "webpack --progress --hide-modules"
+  },
+  "main": "dist/index.min.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/euvl/v-clipboard.git"
+  },
+  "bugs": {
+    "url": "https://github.com/euvl/v-clipboard/issues"
+  },
+  "keywords": [
+    "vue",
+    "clipboard"
+  ],
+  "devDependencies": {
+    "babel-core": "^6.0.0",
+    "babel-loader": "^6.0.0",
+    "babel-preset-latest": "^6.0.0",
+    "webpack": "^2.2.0"
+  }
+}
