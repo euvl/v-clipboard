@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/v-clipboard.svg)](https://badge.fury.io/js/v-clipboard)
+
 ## Vue.js Clipboard plugin
 
 (No dependencies, less than **2kb** minified)
