@@ -31,10 +31,11 @@ export default {
         el.addEventListener('click', (event) => {
           if (binding.hasOwnProperty('value')) {
             let { value } = binding
+            let payload = { value, srcEvent: event }
             
             copy(value)
-              ? vnode.$emit('copy', value)
-              : vnode.$emit('copyError')
+              ? vnode.$emit('copy', payload)
+              : vnode.$emit('copyError', payload)
           }
         })
       }
