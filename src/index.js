@@ -34,10 +34,11 @@ export default {
           if (binding.hasOwnProperty('value')) {
             let { value } = binding
             let payload = { value, srcEvent: event }
+            let context = vnode.context
             
             copy(value)
-              ? vnode.$emit('copy', payload)
-              : vnode.$emit('copyError', payload)
+              ? context.$emit('copy', payload)
+              : context.$emit('copyError', payload)
           }
         })
       }

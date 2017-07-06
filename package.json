@@ -1,7 +1,7 @@
 {
   "name": "v-clipboard",
   "description": "Vue.js Clipboard Plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "author": "euvl <yev.vlasenko@gmail.com>",
   "private": false,
   "scripts": {
