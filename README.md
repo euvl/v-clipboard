@@ -27,7 +27,7 @@ When an element that contains `v-clipboard` directive is clicked, the value of `
 
 2. Using `this.$clipboard(value)` function.
 
-This one is simle :-)
+This one is simple :-)
 
 ### Examples
 
