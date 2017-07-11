@@ -60,8 +60,8 @@ methods: {
 
 ```vue
 <button v-clipboard="foo"
-        @copy="clipboardSuccessHandler"
-        @copy-error="clipboardErrorHandler">
+        @copy="clipboardSuccessHandler"      // Success event handler 
+        @copy-error="clipboardErrorHandler"> // Error event handler
   Copy to clipboard
 </button> 
 ```
