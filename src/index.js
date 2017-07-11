@@ -5,6 +5,14 @@ const cssText =
   'position:fixed;pointer-events:none;z-index:-9999;opacity:0;'
 
 const copy = (text) => {
+  if (typeof text !== 'string') {
+    try {
+      text = JSON.stringify(text)
+    } catch (e) {
+      throw 'Failed to copy value to clipboard. Unknown type.'
+    }
+  }
+ 
   let textArea = document.createElement("textarea")
   let success = false
 
