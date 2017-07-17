@@ -65,3 +65,9 @@ methods: {
   Copy to clipboard
 </button> 
 ```
+
+### Compatibility
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/1577802/28269902-8ae0e01e-6afb-11e7-9981-d4965bac69d1.png">
+</p>
