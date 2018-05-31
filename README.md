@@ -17,17 +17,35 @@ import Clipboard from 'v-clipboard'
 Vue.use(Clipboard)
 ```
 
-### Use
+### Using
 
-There are 2 ways of using this plugin:
+```vuejs
+<!-- If "value" is static -->
+<button v-clipboard="() => value">
+  Copy to clipboard
+</button>
 
-1. Using `v-clipboard="mymodel"` directive. 
+<!-- If "value" is dynamic -->
+<button v-clipboard="() => value">
+  Copy to clipboard
+</button>
+```
 
-When an element that contains `v-clipboard` directive is clicked, the value of `mymodel` will be copied into clipboard.
+When an element that contains `v-clipboard` directive is clicked, the value of `value` will be copied into clipboard.
 
-2. Using `this.$clipboard(value)` function.
+```js
+this.$clipboard(value)
+```
 
-This one is simple :-)
+### Events
+
+```vue
+<button v-clipboard="foo"
+        v-clipboard:success="clipboardSuccessHandler" // Success event handler 
+        v-clipboard:error="clipboardErrorHandler">    // Error event handler
+  Copy to clipboard
+</button> 
+```
 
 ### Examples
 
@@ -54,16 +72,6 @@ methods: {
     this.$clipboard("Baaaaaaaaar")
   }
 }
-```
-
-### Events
-
-```vue
-<button v-clipboard="foo"
-        @copy="clipboardSuccessHandler"      // Success event handler 
-        @copy-error="clipboardErrorHandler"> // Error event handler
-  Copy to clipboard
-</button> 
 ```
 
 ### Compatibility
