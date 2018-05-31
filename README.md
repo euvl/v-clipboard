@@ -1,6 +1,10 @@
 [![npm version](https://badge.fury.io/js/v-clipboard.svg)](https://badge.fury.io/js/v-clipboard)
 
-<img width="628" alt="screen shot 2018-05-31 at 14 46 59" src="https://user-images.githubusercontent.com/1577802/40780578-8c68459a-64e1-11e8-9e5c-ce147eb042cd.png">
+<p align="center">
+<img width="628" 
+     alt="Version 2.0.0" 
+     src="https://user-images.githubusercontent.com/1577802/40780578-8c68459a-64e1-11e8-9e5c-ce147eb042cd.png">
+</p>
 
 ## Vue.js Clipboard
 
