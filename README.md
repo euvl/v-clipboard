@@ -1,8 +1,10 @@
 [![npm version](https://badge.fury.io/js/v-clipboard.svg)](https://badge.fury.io/js/v-clipboard)
 
-## Vue.js Clipboard plugin
+**Version 2.0.0 has breaking changes. Make sure you update to 2.0.0 if you want to use events/callbacks**
 
-(No dependencies, less than **2kb** minified)
+## Vue.js Clipboard
+
+<sup>(no dependencies)</sup>
 
 ### Install
 
@@ -19,20 +21,23 @@ Vue.use(Clipboard)
 
 ### Using
 
-```vuejs
-<!-- If "value" is static -->
-<button v-clipboard="() => value">
+> When an element that contains `v-clipboard` directive is clicked, the value of `value` will be copied into clipboard.
+
+Copying **static** value (directive should receive actual value):
+```vue
+<button v-clipboard="value">
   Copy to clipboard
 </button>
+```
 
-<!-- If "value" is dynamic -->
+Copying **dynamic** value (directive should recieve a function that returns value):
+```vue
 <button v-clipboard="() => value">
   Copy to clipboard
 </button>
 ```
 
-When an element that contains `v-clipboard` directive is clicked, the value of `value` will be copied into clipboard.
-
+Copying **anything** in your methods:
 ```js
 this.$clipboard(value)
 ```
@@ -45,33 +50,6 @@ this.$clipboard(value)
         v-clipboard:error="clipboardErrorHandler">    // Error event handler
   Copy to clipboard
 </button> 
-```
-
-### Examples
-
-Option 1: *Using template only*.
-
-```vue
-<input v-model="foo">
-
-<button v-clipboard="foo">
-  Copy to clipboard
-</button> 
-```
-
-Option 2: *Using javascript call*.
-
-```vue
-<button @click="copy">
-  Copy to clipboard
-</button> 
-```
-```javascript
-methods: {
-  copy () {
-    this.$clipboard("Baaaaaaaaar")
-  }
-}
 ```
 
 ### Compatibility
