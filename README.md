@@ -54,6 +54,20 @@ this.$clipboard(value)
 </button> 
 ```
 
+```js
+{
+  methods: {
+    clipboardSuccessHandler ({ value, event }) {
+      console.log('success', value)
+    },
+
+    clipboardErrorHandler ({ value, event }) {
+      console.log('error', value)
+    }
+  }
+}
+```
+
 ### Compatibility
 
 <p align="center">
