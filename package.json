@@ -1,7 +1,7 @@
 {
   "name": "v-clipboard",
   "description": "Vue.js Clipboard Plugin",
-  "version": "1.0.4",
+  "version": "1.1.0",
   "author": "euvl <yev.vlasenko@gmail.com>",
   "private": false,
   "scripts": {
@@ -17,7 +17,10 @@
   },
   "keywords": [
     "vue",
-    "clipboard"
+    "clipboard",
+    "vue clipboard",
+    "copy",
+    "vue copy"
   ],
   "devDependencies": {
     "babel-core": "^6.0.0",
