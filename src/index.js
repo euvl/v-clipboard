@@ -6,7 +6,7 @@ const copyErrorMessage = "Failed to copy value to clipboard. Unknown type.";
 
 const $clipboard = input => {
   const textarea = document.createElement("textarea");
-  let value = "";
+  let value;
 
   if (typeof input !== "string") {
     try {
@@ -14,6 +14,8 @@ const $clipboard = input => {
     } catch (e) {
       throw copyErrorMessage;
     }
+  } else {
+    value = input
   }
 
   textarea.value = value;
