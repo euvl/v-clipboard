@@ -1,20 +1,20 @@
-var path = require('path')
-var webpack = require('webpack')
+var path = require("path");
+var webpack = require("webpack");
 
 module.exports = {
-  entry: './src/index.js',
+  entry: "./src/index.js",
   output: {
-    path: path.resolve(__dirname, './dist'),
-    publicPath: '/dist/',
-    filename: 'index.min.js',
-    library:'v-clipboard',
-    libraryTarget: 'umd'
+    path: path.resolve(__dirname, "./dist"),
+    publicPath: "/dist/",
+    filename: "index.min.js",
+    library: "v-clipboard",
+    libraryTarget: "umd"
   },
   module: {
     rules: [
       {
         test: /\.js$/,
-        loader: 'babel-loader',
+        loader: "babel-loader",
         exclude: /node_modules/
       }
     ]
@@ -22,12 +22,10 @@ module.exports = {
   performance: {
     hints: false
   },
-  devtool: '#source-map',
+  devtool: "#source-map",
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
-//      compress: false,
-//      comments: false,
       sourceMap: true
     })
   ]
-}
+};
