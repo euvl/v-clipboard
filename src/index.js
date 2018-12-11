@@ -4,34 +4,59 @@
 const cssText = "position:fixed;pointer-events:none;z-index:-9999;opacity:0;";
 const copyErrorMessage = "Failed to copy value to clipboard. Unknown type.";
 
-const $clipboard = text => {
-  if (typeof text !== "string") {
-    try {
-      text = JSON.stringify(text);
-    } catch (e) {
-      throw copyErrorMessage;
+const $clipboard = (input) => {
+    const textarea = document.createElement('textarea');
+    let value = ''
+
+    if (typeof input !== "string") {
+      try {
+        value = JSON.stringify(input);
+      } catch (e) {
+        throw copyErrorMessage;
+      }
     }
-  }
 
-  const textArea = document.createElement("textarea");
-  let success = false;
+    textarea.value = value;
+    textarea.setAttribute('readonly', '');
+    textarea.style = cssText
 
-  textArea.value = text;
-  textArea.style.cssText = cssText;
+    document.body.appendChild(el);
 
-  document.body.appendChild(textArea);
-  textArea.select();
+    if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
+      const editable = textarea.contentEditable;
+      const readOnly = textarea.readOnly;
 
-  try {
-    success = document.execCommand("copy");
-  } catch (err) {
-    console.warn(err);
-  }
+      textarea.contentEditable = true;
+      textarea.readOnly = true;
 
-  document.body.removeChild(textArea);
+      const range = document.createRange();
 
-  return success;
-};
+      range.selectNodeContents(el);
+
+      const selection = window.getSelection();
+
+      selection.removeAllRanges();
+      selection.addRange(range);
+      textarea.setSelectionRange(0, 999999);
+
+      textarea.contentEditable = editable;
+      textarea.readOnly = readOnly;
+    } else {
+      textarea.select(); 
+    }
+
+    let success = false;
+
+    try {
+      success = document.execCommand("copy");
+    } catch (err) {
+      console.warn(err);
+    }
+
+    document.body.removeChild(textarea);
+
+    return success
+}
 
 export default {
   install(Vue) {
@@ -55,7 +80,7 @@ export default {
     };
 
     Vue.directive("clipboard", {
-      bind(el, binding, vnode) {
+      bind (el, binding) {
         const { arg, value } = binding;
 
         switch (arg) {
@@ -98,7 +123,7 @@ export default {
         }
       },
 
-      unbind(el, binding, vnode) {
+      unbind (el) {
         const {
           clipboardSuccessHandler,
           clipboardErrorHandler,
