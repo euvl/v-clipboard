@@ -20,7 +20,7 @@ const $clipboard = (input) => {
     textarea.setAttribute('readonly', '');
     textarea.style = cssText
 
-    document.body.appendChild(el);
+    document.body.appendChild(textarea);
 
     if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
       const editable = textarea.contentEditable;
@@ -31,7 +31,7 @@ const $clipboard = (input) => {
 
       const range = document.createRange();
 
-      range.selectNodeContents(el);
+      range.selectNodeContents(textarea);
 
       const selection = window.getSelection();
 
