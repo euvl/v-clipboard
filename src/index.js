@@ -20,7 +20,7 @@ const $clipboard = input => {
 
   textarea.value = value;
   textarea.setAttribute("readonly", "");
-  textarea.style = cssText;
+  textarea.style.cssText = cssText;
 
   document.body.appendChild(textarea);
 
