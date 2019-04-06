@@ -4,6 +4,7 @@
   "version": "2.2.1",
   "author": "euvl <yev.vlasenko@gmail.com>",
   "private": false,
+  "types": "src/index.d.ts",
   "scripts": {
     "build": "webpack --progress --hide-modules"
   },
