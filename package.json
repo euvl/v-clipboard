@@ -3,6 +3,7 @@
   "description": "Vue.js Clipboard Plugin",
   "version": "2.2.2",
   "author": "euvl <yev.vlasenko@gmail.com>",
+  "license": "MIT",
   "private": false,
   "types": "src/index.d.ts",
   "scripts": {
