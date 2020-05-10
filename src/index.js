@@ -25,8 +25,8 @@ const $clipboard = (input) => {
   document.body.appendChild(textarea)
 
   if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
-    textarea.contentEditable = true;
-    textarea.readOnly = true;
+    textarea.contentEditable = true
+    textarea.readOnly = true
 
     const range = document.createRange()
 
@@ -34,9 +34,9 @@ const $clipboard = (input) => {
 
     const selection = window.getSelection()
 
-    selection.removeAllRanges();
-    selection.addRange(range);
-    textarea.setSelectionRange(0, 999999);
+    selection.removeAllRanges()
+    selection.addRange(range)
+    textarea.setSelectionRange(0, 999999)
   } else {
     textarea.select()
   }
