@@ -5,7 +5,6 @@ const cssText = 'position:fixed;pointer-events:none;z-index:-9999;opacity:0;'
 const copyErrorMessage = 'Failed to copy value to clipboard. Unknown type.'
 
 const $clipboard = (input) => {
-  const textarea = document.createElement('textarea')
   let value
 
   if (typeof input !== 'string') {
@@ -17,6 +16,8 @@ const $clipboard = (input) => {
   } else {
     value = input
   }
+
+  const textarea = document.createElement('textarea')
 
   textarea.value = value
   textarea.setAttribute('readonly', '')
