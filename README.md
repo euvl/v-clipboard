@@ -9,7 +9,7 @@ npm install --save v-clipboard
 ```
 
 ```javascript
-import Vue       from 'vue'
+import Vue from 'vue'
 import Clipboard from 'v-clipboard'
 
 Vue.use(Clipboard)
@@ -20,6 +20,7 @@ Vue.use(Clipboard)
 > When an element that contains `v-clipboard` directive is clicked, the value of `value` will be copied into clipboard.
 
 Copying **static** value (directive should receive actual value):
+
 ```vue
 <button v-clipboard="value">
   Copy to clipboard
@@ -27,6 +28,7 @@ Copying **static** value (directive should receive actual value):
 ```
 
 Copying **dynamic** value (directive should recieve a function that returns value):
+
 ```vue
 <button v-clipboard="() => value">
   Copy to clipboard
@@ -34,6 +36,7 @@ Copying **dynamic** value (directive should recieve a function that returns valu
 ```
 
 Copying **anything** in your methods:
+
 ```js
 this.$clipboard(value)
 ```
@@ -42,10 +45,10 @@ this.$clipboard(value)
 
 ```vue
 <button v-clipboard="foo"
-        v-clipboard:success="clipboardSuccessHandler" // Success event handler 
+        v-clipboard:success="clipboardSuccessHandler" // Success event handler
         v-clipboard:error="clipboardErrorHandler">    // Error event handler
   Copy to clipboard
-</button> 
+</button>
 ```
 
 ```js
