@@ -56,8 +56,9 @@ const $clipboard = (input) => {
 }
 
 export default {
-  install(Vue) {
-    Vue.prototype.$clipboard = $clipboard
+  install(app) {
+    // Vue.prototype.$clipboard = $clipboard
+    app.config.globalProperties.$clipboard = $clipboard
 
     const generateId = ((id) => () => '$' + id++)(1)
     const handlers = {}
@@ -76,8 +77,10 @@ export default {
       return id
     }
 
-    Vue.directive('clipboard', {
-      bind(el, binding) {
+    // Vue.directive('clipboard', {
+    app.directive('clipboard', {
+      // bind(el, binding) {
+      beforeMount(el, binding) {
         const { arg, value } = binding
 
         switch (arg) {
@@ -120,7 +123,7 @@ export default {
         }
       },
 
-      unbind(el) {
+      unmounted(el) {
         const {
           clipboardSuccessHandler,
           clipboardErrorHandler,
