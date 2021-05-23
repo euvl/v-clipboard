@@ -19,10 +19,11 @@ const $clipboard = (input) => {
 
   const textarea = document.createElement('textarea')
 
+  textarea.addEventListener('focusin', e => e.stopPropagation());
   textarea.value = value
   textarea.setAttribute('readonly', '')
   textarea.style.cssText = cssText
-
+ 
   document.body.appendChild(textarea)
 
   if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
