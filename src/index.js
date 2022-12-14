@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2017 - 2018 - Yev Vlasenko
+ * Copyright (c) 2017 - Yev Vlasenko
  */
 const cssText = 'position:fixed;pointer-events:none;z-index:-9999;opacity:0;'
 const copyErrorMessage = 'Failed to copy value to clipboard. Unknown type.'
@@ -32,7 +32,9 @@ const $clipboard = (input) => {
 
   const textarea = document.createElement('textarea')
 
-  textarea.addEventListener('focusin', (e) => e.stopPropagation())
+  textarea.addEventListener('focusin', (event) => {
+    event.stopPropagation()
+  })
   textarea.value = value
   textarea.setAttribute('readonly', '')
   textarea.style.cssText = cssText
