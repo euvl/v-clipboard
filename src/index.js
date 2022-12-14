@@ -58,8 +58,10 @@ const $clipboard = (input) => {
 
 export default {
   install(app) {
-    // Vue.prototype.$clipboard = $clipboard
-    app.config.globalProperties.$clipboard = $clipboard
+    // Vue v2.x compat
+    const globalCtx =
+      app.version[0] === '3' ? app.config.globalProperties : app.prototype
+    globalCtx.$clipboard = $clipboard
 
     const generateId = ((id) => () => '$' + id++)(1)
     const handlers = {}
@@ -78,9 +80,7 @@ export default {
       return id
     }
 
-    // Vue.directive('clipboard', {
     app.directive('clipboard', {
-      // bind(el, binding) {
       beforeMount(el, binding) {
         const { arg, value } = binding
 
@@ -138,6 +138,14 @@ export default {
           el.removeEventListener('click', handlers[clipboardClickHandler])
           removeHandler(clipboardClickHandler)
         }
+      },
+
+      // Vue v2.x compat
+      get bind() {
+        return this.beforeMount
+      },
+      get unbind() {
+        return this.unmounted
       }
     })
   }
