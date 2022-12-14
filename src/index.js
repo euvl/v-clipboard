@@ -4,6 +4,19 @@
 const cssText = 'position:fixed;pointer-events:none;z-index:-9999;opacity:0;'
 const copyErrorMessage = 'Failed to copy value to clipboard. Unknown type.'
 
+const requestClipboardPermission = (onSuccess) => {
+  navigator.permissions
+    .query({ name: 'clipboard-write' })
+    .then((result) => {
+      if (result.state === 'granted' || result.state === 'prompt') {
+        onSuccess(result)
+      }
+    })
+    .catch((error) => {
+      console.warn(error)
+    })
+}
+
 const $clipboard = (input) => {
   let value
 
@@ -19,11 +32,11 @@ const $clipboard = (input) => {
 
   const textarea = document.createElement('textarea')
 
-  textarea.addEventListener('focusin', e => e.stopPropagation());
+  textarea.addEventListener('focusin', (e) => e.stopPropagation())
   textarea.value = value
   textarea.setAttribute('readonly', '')
   textarea.style.cssText = cssText
- 
+
   document.body.appendChild(textarea)
 
   if (navigator.userAgent.match(/ipad|ipod|iphone/i)) {
@@ -47,6 +60,19 @@ const $clipboard = (input) => {
 
   try {
     success = document.execCommand('copy')
+
+    if (!success) {
+      requestClipboardPermission(() => {
+        navigator.clipboard.writeText(value).then(
+          () => {
+            /* clipboard successfully set */
+          },
+          (error) => {
+            console.warn(error)
+          }
+        )
+      })
+    }
   } catch (err) {
     console.warn(err)
   }
@@ -63,7 +89,10 @@ export default {
       app.version[0] === '3' ? app.config.globalProperties : app.prototype
     globalCtx.$clipboard = $clipboard
 
-    const generateId = ((id) => () => '$' + id++)(1)
+    const generateId = (
+      (id) => () =>
+        '$' + id++
+    )(1)
     const handlers = {}
 
     const removeHandler = (id) => {
