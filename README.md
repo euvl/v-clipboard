@@ -7,9 +7,9 @@
 
 ```bash
 npm install --save v-clipboard
+```
 
----
-
+```bash
 yarn add v-clipboard
 ```
 
