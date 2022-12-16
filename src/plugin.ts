@@ -37,7 +37,7 @@ export const ClipboardPlugin: Plugin = {
             ? el.dataset.clipboardSuccess
             : el.dataset.clipboardError
 
-          cache.get(callbackId!)?.({ value, event })
+          cache.get(callbackId!)?.(value, event)
         }
 
         el.dataset.clipboardClick = cache.add(onClick)
