@@ -3,7 +3,7 @@
 
 ## Vue Clipboard
 
-### Demo 
+### Demo
 
 https://codesandbox.io/s/epic-waterfall-17yet5?file=/src/App.vue
 
@@ -58,9 +58,10 @@ Copying **anything** in your methods:
 this.$clipboard(value)
 ```
 
-Without plugin: 
+Without plugin:
+
 ```js
-import { Clipboard } from "v-clipboard"
+import { Clipboard } from 'v-clipboard'
 
 Clipboard.copy(value)
 ```
@@ -68,9 +69,11 @@ Clipboard.copy(value)
 ### Events
 
 ```vue
-<button v-clipboard="foo"
-        v-clipboard:success="clipboardSuccessHandler"
-        v-clipboard:error="clipboardErrorHandler">
+<button
+  v-clipboard="foo"
+  v-clipboard:success="clipboardSuccessHandler"
+  v-clipboard:error="clipboardErrorHandler"
+>
   Copy to clipboard
 </button>
 ```
@@ -78,11 +81,11 @@ Clipboard.copy(value)
 ```js
 {
   methods: {
-    clipboardSuccessHandler ({ value, event }) {
+    clipboardSuccessHandler (value, event) {
       console.log('success', value)
     },
 
-    clipboardErrorHandler ({ value, event }) {
+    clipboardErrorHandler (value, event) {
       console.log('error', value)
     }
   }
