@@ -1,4 +1,4 @@
-[![npm](https://img.shields.io/npm/v/v-clipboard)](https://img.shields.io/npm/v/v-clipboard)]
+[![npm](https://img.shields.io/npm/v/v-clipboard)](https://img.shields.io/npm/v/v-clipboard)
 [![npm](https://img.shields.io/npm/dy/v-clipboard)](https://img.shields.io/npm/dy/v-clipboard)
 
 ## Vue Clipboard
@@ -14,10 +14,10 @@ yarn add v-clipboard
 ```
 
 ```javascript
-import Vue from "vue";
-import Clipboard from "v-clipboard";
+import Vue from 'vue'
+import Clipboard from 'v-clipboard'
 
-Vue.use(Clipboard);
+Vue.use(Clipboard)
 ```
 
 ### Using
@@ -43,7 +43,7 @@ Copying **dynamic** value (directive should recieve a function that returns valu
 Copying **anything** in your methods:
 
 ```js
-this.$clipboard(value);
+this.$clipboard(value)
 ```
 
 ### Events
