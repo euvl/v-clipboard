@@ -69,8 +69,8 @@ Clipboard.copy(value)
 
 ```vue
 <button v-clipboard="foo"
-        v-clipboard:success="clipboardSuccessHandler" // Success event handler
-        v-clipboard:error="clipboardErrorHandler">    // Error event handler
+        v-clipboard:success="clipboardSuccessHandler"
+        v-clipboard:error="clipboardErrorHandler">
   Copy to clipboard
 </button>
 ```
