@@ -3,6 +3,10 @@
 
 ## Vue Clipboard
 
+### Demo 
+
+https://codesandbox.io/s/epic-waterfall-17yet5?file=/src/App.vue
+
 ### Install
 
 ```bash
