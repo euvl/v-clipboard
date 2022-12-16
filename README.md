@@ -3,6 +3,10 @@
 
 ## Vue Clipboard
 
+### Demo 
+
+https://codesandbox.io/s/epic-waterfall-17yet5?file=/src/App.vue
+
 ### Install
 
 ```bash
@@ -22,12 +26,20 @@ Vue.use(Clipboard)
 
 ### Using
 
-> When an element that contains `v-clipboard` directive is clicked, the value of `value` will be copied into clipboard.
+When an element that contains `v-clipboard` directive is clicked, the value of `value` will be copied into clipboard.
+
+---
 
 Copying **static** value (directive should receive actual value):
 
 ```vue
 <button v-clipboard="value">
+  Copy to clipboard
+</button>
+```
+
+```vue
+<button v-clipboard="'some text'">
   Copy to clipboard
 </button>
 ```
@@ -46,12 +58,19 @@ Copying **anything** in your methods:
 this.$clipboard(value)
 ```
 
+Without plugin: 
+```js
+import { Clipboard } from "v-clipboard"
+
+Clipboard.copy(value)
+```
+
 ### Events
 
 ```vue
 <button v-clipboard="foo"
-        v-clipboard:success="clipboardSuccessHandler" // Success event handler
-        v-clipboard:error="clipboardErrorHandler">    // Error event handler
+        v-clipboard:success="clipboardSuccessHandler"
+        v-clipboard:error="clipboardErrorHandler">
   Copy to clipboard
 </button>
 ```
