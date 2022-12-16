@@ -26,7 +26,9 @@ Vue.use(Clipboard)
 
 ### Using
 
-> When an element that contains `v-clipboard` directive is clicked, the value of `value` will be copied into clipboard.
+When an element that contains `v-clipboard` directive is clicked, the value of `value` will be copied into clipboard.
+
+---
 
 Copying **static** value (directive should receive actual value):
 
