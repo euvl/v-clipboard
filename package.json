@@ -4,7 +4,7 @@
   "author": "https://github.com/euvl",
   "private": false,
   "license": "MIT",
-  "version": "3.0.0-next.0",
+  "version": "3.0.0-next.1",
   "type": "module",
   "scripts": {
     "build": "vite build"
