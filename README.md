@@ -38,6 +38,12 @@ Copying **static** value (directive should receive actual value):
 </button>
 ```
 
+```vue
+<button v-clipboard="'some text'">
+  Copy to clipboard
+</button>
+```
+
 Copying **dynamic** value (directive should recieve a function that returns value):
 
 ```vue
@@ -50,10 +56,11 @@ Copying **anything** in your methods:
 
 ```js
 this.$clipboard(value)
+```
 
-// OR 
-
-impport { Clipboard } from "v-clipboard"
+Without plugin: 
+```js
+import { Clipboard } from "v-clipboard"
 
 Clipboard.copy(value)
 ```
