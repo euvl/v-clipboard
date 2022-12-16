@@ -50,6 +50,12 @@ Copying **anything** in your methods:
 
 ```js
 this.$clipboard(value)
+
+// OR 
+
+impport { Clipboard } from "v-clipboard"
+
+Clipboard.copy(value)
 ```
 
 ### Events
