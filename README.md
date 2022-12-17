@@ -1,7 +1,6 @@
 [![npm](https://img.shields.io/npm/v/v-clipboard)](https://img.shields.io/npm/v/v-clipboard)
 [![npm](https://img.shields.io/npm/dy/v-clipboard)](https://img.shields.io/npm/dy/v-clipboard)
 
-## Vue Clipboard
 
 ### Supporters
 
