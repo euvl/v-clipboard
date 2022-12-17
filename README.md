@@ -5,10 +5,14 @@
 
 ### Supporters
 
-
-[![Blitz.so](https://user-images.githubusercontent.com/1577802/208237314-b5921a5a-4b90-4689-8c0d-4948f98b6ba1.png)](https://blitz.so/yev_vlasenko)
-
-[![Shareback.com](https://user-images.githubusercontent.com/1577802/208237315-4039fb0e-dd59-42e6-829c-bd6fdae7a673.png)](https://shareback.com)
+<p >
+  <a href="https://blitz.so/yev_vlasenko" target="_blank" align="left">
+      <img src="https://user-images.githubusercontent.com/1577802/208237314-b5921a5a-4b90-4689-8c0d-4948f98b6ba1.png" />
+  </a>
+  <a href="https://shareback.com" align="right" target="_blank">
+      <img src="https://user-images.githubusercontent.com/1577802/208237315-4039fb0e-dd59-42e6-829c-bd6fdae7a673.png" />
+  </a>
+</p>
 
 Check them out.
 
