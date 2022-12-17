@@ -4,11 +4,13 @@
 ## Vue Clipboard
 
 ### Supporters
-> Check them out 👀
 
-[![Blitz.so](https://user-images.githubusercontent.com/1577802/208237027-3bdd8eb8-083a-4d04-b1b3-4565cf3ae69f.png)](https://blitz.so/yev_vlasenko)
 
-[![Shareback.com](https://user-images.githubusercontent.com/1577802/208237028-48f77d56-b242-4bfe-a083-984e124fdc5f.png)](https://shareback.com)
+[![Blitz.so](https://user-images.githubusercontent.com/1577802/208237314-b5921a5a-4b90-4689-8c0d-4948f98b6ba1.png](https://blitz.so/yev_vlasenko)
+
+[![Shareback.com](https://user-images.githubusercontent.com/1577802/208237315-4039fb0e-dd59-42e6-829c-bd6fdae7a673.png)](https://shareback.com)
+
+Check them out.
 
 ### Install
 
