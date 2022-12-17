@@ -33,7 +33,7 @@ import Clipboard from 'v-clipboard'
 Vue.use(Clipboard)
 ```
 
-### Using
+### Usage
 
 When an element that contains `v-clipboard` directive is clicked, the value of `value` will be copied into clipboard.
 
@@ -72,7 +72,7 @@ Without plugin:
 ```js
 import { Clipboard } from 'v-clipboard'
 
-Clipboard.copy(value)
+await Clipboard.copy(value)
 ```
 
 ### Events
@@ -100,6 +100,10 @@ Clipboard.copy(value)
   }
 }
 ```
+
+### How it works
+
+`copy / $clipboard` is an `async` call. Firstly, library makes an attempt to update clibpoard using `exectCommand`, if that operation is unsuccessful it makes an attemnt to use Navigator Clipboard API and automatically requests access, waits for access to be granted, then writes to clipboard.
 
 
 ### Demo
