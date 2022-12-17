@@ -1,17 +1,19 @@
 [![npm](https://img.shields.io/npm/v/v-clipboard)](https://img.shields.io/npm/v/v-clipboard)
 [![npm](https://img.shields.io/npm/dy/v-clipboard)](https://img.shields.io/npm/dy/v-clipboard)
 
-## Vue Clipboard
 
-### Demo
+### Supporters
 
-https://codesandbox.io/s/epic-waterfall-17yet5?file=/src/App.vue
+<p >
+  <a href="https://blitz.so/yev_vlasenko?utm_source=github" target="_blank" align="left">
+      <img src="https://user-images.githubusercontent.com/1577802/208237314-b5921a5a-4b90-4689-8c0d-4948f98b6ba1.png" />
+  </a>
+  <a href="https://shareback.com?utm_source=github" align="right" target="_blank">
+      <img src="https://user-images.githubusercontent.com/1577802/208237315-4039fb0e-dd59-42e6-829c-bd6fdae7a673.png" />
+  </a>
+</p>
 
-### SUPPORTERS
-
-[![Blitz.so](https://user-images.githubusercontent.com/1577802/208237027-3bdd8eb8-083a-4d04-b1b3-4565cf3ae69f.png)](https://blitz.so/yev_vlasenko)
-
-[![Shareback.com](https://user-images.githubusercontent.com/1577802/208237028-48f77d56-b242-4bfe-a083-984e124fdc5f.png)](https://shareback.com)
+Check them out.
 
 ### Install
 
@@ -30,7 +32,7 @@ import Clipboard from 'v-clipboard'
 Vue.use(Clipboard)
 ```
 
-### Using
+### Usage
 
 When an element that contains `v-clipboard` directive is clicked, the value of `value` will be copied into clipboard.
 
@@ -69,7 +71,7 @@ Without plugin:
 ```js
 import { Clipboard } from 'v-clipboard'
 
-Clipboard.copy(value)
+await Clipboard.copy(value)
 ```
 
 ### Events
@@ -97,6 +99,16 @@ Clipboard.copy(value)
   }
 }
 ```
+
+### How it works
+
+`copy / $clipboard` is an `async` call. Firstly, library makes an attempt to update clibpoard using `execCommand`, if that operation is unsuccessful it makes an attemnt to use Navigator Clipboard API and automatically requests access, waits for access to be granted, then writes to clipboard.
+
+
+### Demo
+
+https://codesandbox.io/s/epic-waterfall-17yet5?file=/src/App.vue
+
 
 ### Compatibility
 
