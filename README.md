@@ -6,7 +6,7 @@
 ### Supporters
 
 <p >
-  <a href="https://blitz.so/yev_vlasenko?utm_source==github" target="_blank" align="left">
+  <a href="https://blitz.so/yev_vlasenko?utm_source=github" target="_blank" align="left">
       <img src="https://user-images.githubusercontent.com/1577802/208237314-b5921a5a-4b90-4689-8c0d-4948f98b6ba1.png" />
   </a>
   <a href="https://shareback.com?utm_source=github" align="right" target="_blank">
