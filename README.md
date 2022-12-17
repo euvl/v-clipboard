@@ -7,6 +7,12 @@
 
 https://codesandbox.io/s/epic-waterfall-17yet5?file=/src/App.vue
 
+### SUPPORTERS
+
+[![Blitz.so](https://user-images.githubusercontent.com/1577802/208237027-3bdd8eb8-083a-4d04-b1b3-4565cf3ae69f.png)](https://blitz.so/yev_vlasenko)
+
+[![Shareback.com](https://user-images.githubusercontent.com/1577802/208237028-48f77d56-b242-4bfe-a083-984e124fdc5f.png)](https://shareback.com)
+
 ### Install
 
 ```bash
