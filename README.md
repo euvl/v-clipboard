@@ -103,7 +103,7 @@ await Clipboard.copy(value)
 
 ### How it works
 
-`copy / $clipboard` is an `async` call. Firstly, library makes an attempt to update clibpoard using `exectCommand`, if that operation is unsuccessful it makes an attemnt to use Navigator Clipboard API and automatically requests access, waits for access to be granted, then writes to clipboard.
+`copy / $clipboard` is an `async` call. Firstly, library makes an attempt to update clibpoard using `execCommand`, if that operation is unsuccessful it makes an attemnt to use Navigator Clipboard API and automatically requests access, waits for access to be granted, then writes to clipboard.
 
 
 ### Demo
