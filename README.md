@@ -6,7 +6,7 @@
 ### Supporters
 > Check them out 👀
 
-[![Blitz.so](https://user-images.githubusercontent.com/1577802/208237027-3bdd8eb8-083a-4d04-b1b3-4565cf3ae69f.png)](https://blitz.so/yev_vlasenko | width=100)
+[![Blitz.so](https://user-images.githubusercontent.com/1577802/208237027-3bdd8eb8-083a-4d04-b1b3-4565cf3ae69f.png | width=100)](https://blitz.so/yev_vlasenko)
 
 [![Shareback.com](https://user-images.githubusercontent.com/1577802/208237028-48f77d56-b242-4bfe-a083-984e124fdc5f.png)](https://shareback.com)
 
