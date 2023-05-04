@@ -25,7 +25,7 @@ export const ClipboardPlugin: Plugin = {
           return
         }
 
-        if (arg === 'error' && isFn) {
+        if (arg === 'success' && isFn) {
           el.dataset.clipboardSuccess = cache.add(value)
           return
         }
